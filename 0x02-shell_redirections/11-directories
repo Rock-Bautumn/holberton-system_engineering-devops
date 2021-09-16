@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1adR */ | wc -l
+ls -1adR ./*/* | wc -l
