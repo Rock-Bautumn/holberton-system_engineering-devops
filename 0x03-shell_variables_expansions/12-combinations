@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $'\b'{a..z}{a..z}$'\n' | tr -d " " | grep -v oo
+echo $'\b'{a..z}{a..z}$'\n' | tr -d " " | grep -v oo | grep -E [[:alpha:]]
