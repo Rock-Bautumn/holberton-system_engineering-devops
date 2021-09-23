@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script shows the script's running PIDs from ps. pgrep is not allowed
+# shellcheck disable=SC2009
+ps -aux | grep bash

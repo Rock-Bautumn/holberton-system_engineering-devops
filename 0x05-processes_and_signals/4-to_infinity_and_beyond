@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script repeats "To infinity and beyond" forever and ever and ever and ever
+while ( : )
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
