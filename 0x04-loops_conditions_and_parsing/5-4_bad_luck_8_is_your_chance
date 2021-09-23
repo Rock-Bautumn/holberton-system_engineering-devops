@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script loops 10 times, printing "bad luck" on the 4th loop, "good luck" on the 8th loop, and "Holberton School" for anything else
+
+x=0
+while [ $x -lt 10 ]
+do
+  ((x++))
+  if [ $x -eq 4 ]
+  then
+    echo "bad luck"
+  elif [ $x -eq 8 ]
+  then
+    echo "good luck"
+  else
+    echo "Holberton School"
+  fi
+done

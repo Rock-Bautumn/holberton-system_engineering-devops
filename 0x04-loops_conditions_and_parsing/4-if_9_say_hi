@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#This script prints "Holberton School" 10 times, but also says "Hi" after the 9th time.
+
+x=0
+while [ $x -lt 10 ]
+do
+  ((x++))
+  echo "Holberton School"
+  if [ $x -eq 9 ]
+  then
+    echo "Hi"
+  fi
+done
