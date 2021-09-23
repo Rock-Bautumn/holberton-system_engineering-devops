@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This file prints all files in the directory, removing the first - and everything before in the filenames.
+
+files=$(ls)
+for f in $files
+do
+    echo "$f" | cut --delimiter=- --fields=2-
+done

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This bash script diplays number 1 to 20 and displays various bad luck text for certain values.
+
+x=0
+while [ $x -lt 20 ]
+do
+  ((x++))
+  echo "$x"
+  case "$x" in
+    4)
+      echo "bad luck from China"
+      ;;
+    9)
+      echo "bad luck from Japan"
+      ;;
+    17)
+      echo "bad luck from Italy"
+      ;;
+    *)
+      :
+      ;;
+  esac
+done

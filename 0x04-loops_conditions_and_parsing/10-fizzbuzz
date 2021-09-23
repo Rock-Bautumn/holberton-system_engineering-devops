@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This is a classic fizzbuzz script
+
+x=0
+while [ $x -lt 100 ]
+do
+  ((x++))
+  if [ $((x % 3)) -eq 0 ] && [ $((x % 5)) -eq 0 ]; then
+    echo "FizzBuzz"
+  elif [ $((x % 3)) -eq 0 ]; then
+    echo "Fizz"
+  elif [ $((x % 5)) -eq 0 ]; then
+    echo "Buzz"
+  else
+    echo "$x"
+  fi
+done
