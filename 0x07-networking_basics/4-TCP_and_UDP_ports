@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# Lists all programs currently listening
 
 netstat -lp
