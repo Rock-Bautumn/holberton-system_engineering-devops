@@ -6,7 +6,6 @@ from sys import argv
 import requests
 
 
-
 if __name__ == "__main__":
     """the main code"""
     usersurl = "https://jsonplaceholder.typicode.com/users/"
