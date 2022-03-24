@@ -2,8 +2,8 @@
 """
 Pulls some 'employee' data from a fake api
 """
-from sys import argv
 import requests
+from sys import argv
 
 
 if __name__ == "__main__":
