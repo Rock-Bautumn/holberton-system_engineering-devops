@@ -2,12 +2,15 @@
 """
 Pulls some 'employee' data from a fake api
 """
+from sys import argv
+import requests
+
 
 
 if __name__ == "__main__":
+    """the main code"""
     usersurl = "https://jsonplaceholder.typicode.com/users/"
     todosurl = "https://jsonplaceholder.typicode.com/todos/?userId="
-    from sys import argv
     try:
         employeeid = int(argv[1])
     except (ValueError, TypeError):
@@ -16,7 +19,6 @@ if __name__ == "__main__":
                 argv[0]))
     # print(employeeid)
     requesturl = usersurl + str(employeeid)
-    import requests
     response = requests.get(requesturl)
     # print(response.json())
     reply = response.json()
