@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # print(response.json())
     reply = response.json()
     # print(reply["name"])
-    name = reply["name"]
+    name = reply.get("name")
     requesturl = todosurl + str(employeeid)
     response = requests.get(requesturl)
     reply = response.json()
@@ -39,4 +39,4 @@ if __name__ == "__main__":
     ))
     for task in reply:
         # print("task title: {}".format(task["title"]))
-        print("\t {}".format(task["title"]))
+        print("\t {}".format(task.get("title")))
