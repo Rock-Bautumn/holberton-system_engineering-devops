@@ -31,9 +31,9 @@ if __name__ == "__main__":
     with open('names.csv', 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile, dialect=csv.unix_dialect)
         for item in reply:
-            # Format must be: "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
             csvwriter.writerow(
-                [employeeid, username, item.get("completed"), item.get("title")])
+                [employeeid, username, item.get("completed"),
+                 item.get("title")])
     # print(reply)
     # print(len(reply))
     tasksqty = len(reply)
