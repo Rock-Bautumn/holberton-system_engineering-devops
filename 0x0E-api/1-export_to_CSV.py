@@ -28,7 +28,7 @@ if __name__ == "__main__":
     requesturl = todosurl + str(employeeid)
     response = requests.get(requesturl)
     reply = response.json()
-    with open('names.csv', 'w', newline='') as csvfile:
+    with open("{}.csv".format(employeeid), 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile, dialect=csv.unix_dialect)
         for item in reply:
             csvwriter.writerow(
