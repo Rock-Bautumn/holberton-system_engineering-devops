@@ -36,8 +36,6 @@ if __name__ == "__main__":
             "username": username
             }
         task_list.append(new_dict)
-        # Format must be: { "USER_ID": [{"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS,
-        #  "username": "USERNAME"}, {"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"}, ... ]}
     done_dict = {str(employeeid): task_list}
     out_file = open("{}.json".format(str(employeeid)), "w")
     json.dump(done_dict, out_file)
