@@ -20,7 +20,6 @@ if __name__ == "__main__":
         user_dict[item.get("id")] = item.get("username")
 
     # print(str(user_dict))
-    # { "USER_ID": [ {"username": "USERNAME", "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS},
     done_dict = {}
     for user in user_dict.keys():
         done_dict[str(user)] = []
@@ -49,7 +48,6 @@ if __name__ == "__main__":
             # print(f"ml is {ml} type {type(ml)}")
             if type(ml) == list:
                 done_dict[empId].append(new_dict)
-        # print(f"done dict at the end of todo id {str(item.get('id'))} is {done_dict}")
     out_file = open("todo_all_employees.json", "w")
     json.dump(done_dict, out_file)
 
