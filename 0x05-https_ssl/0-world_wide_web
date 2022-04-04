@@ -6,7 +6,6 @@
 # shellcheck disable=SC2086
 
 frustration () {
-    echo "$#"
     if [ $# -eq "2" ]; then
         dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", thissub, $4, $5}' thissub="$2"
     elif [ $# -eq "1" ]; then
