@@ -9,10 +9,10 @@ frustration () {
     if [ $# -eq "2" ]; then
         dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", thissub, $4, $5}' thissub="$2"
     elif [ $# -eq "1" ]; then
-        dig "www.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain www.%s is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
-        dig "lb-01.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain lb-01.%s is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
-        dig "web-01.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain web-01.%s is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
-        dig "web-02.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain web-02.%s is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
+        dig "www.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain www is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
+        dig "lb-01.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain lb-01 is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
+        dig "web-01.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain web-01 is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
+        dig "web-02.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain web-02 is a %s record and points to %s\n", thissub, $4, $5}' thissub="$1"
     fi
 }
 
